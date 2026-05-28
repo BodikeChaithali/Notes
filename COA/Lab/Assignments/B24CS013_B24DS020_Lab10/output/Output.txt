@@ -1,0 +1,7 @@
+Total Instructions: 3
+Arithmetic: 2
+Logical: 0
+Memory: 0
+Control: 1
+CPI: 3
+Total Stalls: 2
