@@ -1,0 +1,46 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+temperature_points = [
+    (0, 0, 21.5), (1, 0, 22.0), (2, 0, 22.8), (3, 0, 23.5), (4, 0, 24.0),
+    (5, 0, 23.2), (6, 0, 22.5), (7, 0, 21.9), (8, 0, 21.2),
+    (0, 1, 21.6), (1, 1, 22.1), (2, 1, 23.0), (3, 1, 24.1), (4, 1, 24.6),
+    (5, 1, 23.9), (6, 1, 22.8), (7, 1, 22.0), (8, 1, 21.3),
+    (0, 2, 21.7), (1, 2, 22.3), (2, 2, 23.2), (3, 2, 24.5), (4, 2, 24.9),
+    (5, 2, 24.1), (6, 2, 23.0), (7, 2, 22.2), (8, 2, 21.5)
+]
+
+data = np.array(temperature_points)
+
+x = data[:, 0]
+y = data[:, 1]
+temp = data[:, 2]
+
+x_max, y_max = int(max(x)), int(max(y))
+
+temp_grid = np.zeros((y_max + 1, x_max + 1))
+
+for (xi, yi, ti) in temperature_points:
+    temp_grid[int(yi), int(xi)] = ti
+
+plt.rcParams['font.family'] = 'Times New Roman'
+
+plt.figure(figsize=(8, 4))
+plt.imshow(
+    temp_grid,
+    origin='lower',
+    cmap='coolwarm',
+    interpolation='bicubic',
+    extent=[0, x_max, 0, y_max]
+)
+
+plt.xlabel("X Position (m)", fontsize=12)
+plt.ylabel("Y Position (m)", fontsize=12)
+plt.title("Room Temperature Heatmap", fontsize=14, fontweight='bold')
+
+cbar = plt.colorbar()
+cbar.set_label("Temperature (°C)", fontsize=12)
+
+plt.tight_layout()
+plt.savefig("room_temperature.png")
+plt.close()

@@ -1,0 +1,233 @@
+\documentclass[10pt]{beamer}
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+
+% === Yellow bottom bar setup ===
+\setbeamercolor{footline}{bg=yellow, fg=black}
+\setbeamertemplate{footline}{%
+	\leavevmode%
+	\hbox{%
+		\begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1ex,leftskip=1em,rightskip=1em]{footline}%
+			\insertshorttitle \hfill \insertframenumber{} / \inserttotalframenumber
+		\end{beamercolorbox}%
+	}%
+}
+
+\setbeamertemplate{navigation symbols}{} % remove nav symbols
+\setbeamertemplate{caption}[numbered]
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{capt-of} 
+\usepackage{hyperref}
+
+\title[Beamer Lab Activity-3]{Software Tools and Technologies Laboratory\\Latex Lab Activity - 3: Beamer}
+\author[Anand, Arindam]{Anand M. Baswade\and Arindam Chakraborty}
+\institute[ IIT Bhilai ]{\small Faculty of Computer Science and Engineering \\ Indian Institute of Technology, Bhilai  \\ \small M.Tech Student of Computer Science and Engineering \\ Indian Institute of Technology, Bhilai}
+\logo{\includegraphics[width=1.5cm]{expample-image}}
+
+\date{15th September, 2025}
+\theoremstyle{definition}
+\AtBeginSection[]{
+	\begin{frame}<beamer>
+		\frametitle{Table of Contents}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\begin{document}
+	\begin{frame}
+		\titlepage
+		\vfill
+	\end{frame}
+	\begin{frame}{Table of Contents}
+		\begin{enumerate}
+			\item Introduction
+			\item Why Beamer?
+			\item Features
+			\item Highlighting Texts
+			\item Mathematical Concepts
+			\item Linear Search Algorithm
+			\item Images
+			\item Important Equations
+			\item Conclusion
+			\item References
+			\item Thank You
+		\end{enumerate}
+		\vfill
+	\end{frame}
+	
+	\section{Introduction}
+	\begin{frame}{Introduction to \LaTeX{} Beamer}
+		\begin{itemize}
+			\item \LaTeX{} Beamer is a powerful class for creating presentations.
+			\item It allows:
+			\begin{itemize}
+				\item Professional-quality slides
+				\item Mathematical equations
+				\item Figures, tables, and references
+				\item Animations and overlays
+			\end{itemize}
+			\item Advantages:
+			\begin{itemize}
+				\item Consistent formatting
+				\item Easy handling of citations and references
+				\item Cross-platform PDF output
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\section{Why Beamer?}
+	\begin{frame}{Why Use Beamer?}
+		\begin{itemize}[<+->]
+			\item Beamer is designed for creating professional presentations directly in \LaTeX{}.
+			\item Consistent and elegant design
+			\item Full support for mathematical equations
+			\item Easy management of references and citations
+			\item Portable PDF output (works everywhere)
+			\item Highly customizable (themes, colors, backgrounds, animations)
+			\item Free and open-source — no licensing issues
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Comparison with Other Tools}
+		\begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
+			\toprule
+			Feature & Beamer vs PowerPoint\\\midrule
+			Equations & Excellent vs Limited\\
+			Citations & Automatic vs Manual\\
+			Portability & PDF (stable) vs File-dependent\\
+			Cost & Free vs Proprietary\\
+			Customization & High (code-based) vs Moderate (GUI-based)\\\bottomrule
+		\end{tabular}
+	\end{frame}
+	
+	\section{Features}
+	\begin{frame}{Key Features of \LaTeX{} Beamer}
+		\begin{itemize}[<+->]
+			\item Predefined professional themes for elegant slides
+			\item Customizable colors, fonts, and backgrounds
+			\item High-quality PDF output across platforms
+			\item Full support for complex mathematical equations
+			\item Easy insertion of tables, figures, and graphics
+			\item Step-by-step content reveal using overlays
+			\item Integration with BibTeX for automatic citations
+		\end{itemize}
+	\end{frame}
+	
+	\section{Highlighting Texts}
+	\begin{frame}{Blocks and Highlights Example}
+		\begin{block}{Remark}
+			This is a normal block. It wraps the text in a box with the same style as the presentation.
+		\end{block}
+		
+		\begin{alertblock}{Important Theorem}
+			This is an alert block. It contrasts with the regular presentation style.
+		\end{alertblock}
+		
+		\begin{exampleblock}{Examples}
+			This is an example block. Perfect for examples.
+		\end{exampleblock}
+	\end{frame}
+	
+	\section{Mathematical Concepts}
+	\begin{frame}{Definition}
+		\begin{definition}
+			A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+		\end{definition}
+	\end{frame}
+	
+	\begin{frame}{Theorem \& Lemma}
+		\begin{theorem}
+			\textbf{Fundamental Theorem of Arithmetic:} Every integer greater than 1 is either a prime or can be written as a unique product of prime numbers.
+		\end{theorem}
+		\begin{lemma}
+			If a prime $p$ divides a product $ab$, then $p$ divides $a$ or $p$ divides $b$.
+		\end{lemma}
+	\end{frame}
+	
+	\section{Linear Search Algorithm}
+	\begin{frame}{Linear Search Algorithm}
+		\begin{algorithm}[H]
+			\caption{Linear Search}
+			\begin{algorithmic}[1]
+				\Procedure{LinearSearch}{$A, key$}
+				\For{$i=0$ to $n-1$}
+				\If{$A[i]=key$}
+				\State \textbf{return} $i$
+				\EndIf
+				\EndFor
+				\State \textbf{return} -1
+				\EndProcedure
+			\end{algorithmic}
+		\end{algorithm}
+	\end{frame}
+	
+	\section{Corollary}
+	\begin{frame}{Corollary \& Proof}
+		\begin{corollary}
+			The factorization of any integer into primes is unique up to the order of the factors.
+		\end{corollary}
+		\textbf{Proof.}
+		Suppose $n$ has two different prime factorizations. By the lemma, every prime in one factorization divides one of the primes in the other factorization. This leads to a contradiction, proving uniqueness.
+	\end{frame}
+	
+	\section{Images}
+	\begin{frame}{Including an Image in a Block}
+		\begin{block}{Example Image}
+			\centering
+			\fbox{\parbox{0.5\textwidth}{Placeholder for image}}
+			\captionof{figure}{This is a sample image included in a Beamer slide.}
+		\end{block}
+	\end{frame}
+	
+	\section{Important Equations}
+	\begin{frame}{Key Equations in Signal Processing}
+		\begin{align*}
+			X(f) &= \int_{-\infty}^{\infty} x(t) e^{-j2\pi f t}\,dt \\
+			y(t) &= \int_{-\infty}^{\infty} x(\tau) h(t-\tau) \, d\tau \\
+			H(f) &= \frac{Y(f)}{X(f)} = \int_{-\infty}^{\infty} h(t) e^{-j2\pi f t} \, dt
+		\end{align*}
+	\end{frame}
+	
+	\section{Conclusion}
+	\begin{frame}{Conclusion}
+		\begin{itemize}[<+->]
+			\item \LaTeX{} Beamer is a powerful tool for creating professional, structured presentations.
+			\item It supports complex mathematical equations, figures, tables, and references.
+			\item Overlays and incremental reveals help guide the audience’s focus.
+			\item Highly customizable themes, colors, and backgrounds make slides visually appealing.
+		\end{itemize}
+	\end{frame}
+	
+	\section{References}
+	\begin{frame}[allowframebreaks]{References}
+		\begin{thebibliography}{9}
+			\bibitem{latexcompanion}
+			Michel Goossens, Frank Mittelbach, and Alexander Samarin.
+			\textit{The \LaTeX{} Companion.}
+			Addison-Wesley, 1994.
+			
+			\bibitem{texbook}
+			Donald E. Knuth.
+			\textit{The TeXbook.}
+			Addison-Wesley, 1984.
+			
+			\bibitem{kopka}
+			Helmut Kopka and Patrick W. Daly.
+			\textit{A Guide to LaTeX.}
+			Addison-Wesley, 2003.
+		\end{thebibliography}
+	\end{frame}
+	
+	\section{Thank You}
+	\begin{frame}{Thank You!}
+		\centering
+		\LARGE Thank You!\\[1em]
+		Any Questions?
+	\end{frame}
+	
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{amsmath,graphicx,algorithm2e,algorithmic,float}
+\title{A Study on Computational Metrics}
+\author{Bodike Chaithali \\ B24CS013}
+\date{\today}
+\begin{document}
+	\maketitle
+	\begin{abstract}
+		This report demonstrates essential LATEX features including structured
+		sections, equations, tables, figures, algorithms, custom macros, and bibliog-
+		raphy management. We illustrate their usage through a new context with
+		different formulas.
+	\end{abstract}
+	\section{Introduction}
+	Mathematical relationships are fundamental in computational studies. For exam-
+	ple, the Gaussian integral is given by
+	\begin{equation}
+		\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi},
+	\end{equation}
+	which we will reference in later discussions.
+	\section{Methods}
+	We measured the refractive index of the material using the custom macro
+	\[
+		n = \frac{c}{v},
+	\]
+	where $c$ is the speed of light in vacuum and $v$ is the speed of light in the material.
+	\subsection{Figures}
+	Figure \ref{fg:1} shows a demonstration image included to illustrate figure handling.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.4\textwidth]{/home/bodike/Desktop/Sem3/CSP203/Practice/iit-bhilai.jpg}
+		\caption{Sample illustration figure.}
+		\label{fg:1}
+	\end{figure}
+	\subsection{Tables}
+	Table \ref{tb:1} shows sample measurements of sensor readings.
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Sensor & Reading 1 & Reading 2 & Reading 3 \\
+			\hline
+			A & 12.5 & 13.1 & 12.9 \\ \hline
+			B & 14.0 & 13.8 & 14.2 \\ \hline
+			C & 11.8 & 12.0 & 11.9 \\ \hline 
+		\end{tabular}
+		\caption{Sample sensor readings.}
+		\label{tb:1}
+	\end{table}
+	\section{Algorithm}
+	Algorithm \ref{ag:1} demonstrates computing the factorial of a number.\\
+	
+	\begin{algorithm}[H]
+		$n \gets \text{input integer};$ \\
+		$result \gets 1;$ \\
+		\textbf{for } $i \gets 1$ \textbf{ to } $n$ \textbf{ do} \\
+		\hspace*{1em}$result \gets result \times i;$ \\
+		\textbf{end} \\
+		\caption{Compute factorial of an integer}
+		\label{ag:1}
+	\end{algorithm}
+	
+\end{document}

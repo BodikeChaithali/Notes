@@ -1,0 +1,1 @@
+int reverseNum(int n);

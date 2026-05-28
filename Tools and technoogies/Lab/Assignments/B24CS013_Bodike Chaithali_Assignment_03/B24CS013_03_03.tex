@@ -1,0 +1,135 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[margin=0.5in]{geometry} % smaller margin for border
+\usepackage{paracol}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fontawesome}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{tikz} % for border
+
+\definecolor{sectioncolor}{HTML}{2E86AB}
+\titleformat{\section}{\large\bfseries\color{sectioncolor}}{}{0em}{}[\color{sectioncolor}\titlerule]
+\setlist[itemize]{leftmargin=*}
+\pagestyle{empty}
+
+% Draw page border
+\usepackage{background}
+% Draw page border with 3% inner margin
+\backgroundsetup{
+	scale=1,
+	color=black,
+	opacity=1,
+	angle=0,
+	position=current page.south west,
+	vshift=0cm,
+	hshift=0cm,
+	contents={%
+		\begin{tikzpicture}[remember picture,overlay]
+			% Calculate inner margin as 3% of page width/height
+			\draw[line width=1pt] 
+			([xshift=0.015\paperwidth, yshift=-0.015\paperheight]current page.north west) 
+			rectangle 
+			([xshift=-0.015\paperwidth, yshift=0.015\paperheight]current page.south east);
+		\end{tikzpicture}
+	}
+}
+
+\begin{document}
+	
+	% HEADER - TOP RIGHT WITH PHOTO
+	\noindent
+	\begin{minipage}{0.65\textwidth}
+		{\Huge\bfseries BODIKE CHAITHALI}\\[2pt]
+		{\large\scshape \textbf{IIT Bhilai 2024 - 2028}}\\[2pt]
+		{\large\scshape \textit{B.Tech in Computer Science \& Engineering}}\\[1pt]
+		\faGithub\ \href{https://github.com/BodikeChaithali}{GitHub} \quad
+		\faLinkedin\ \href{https://www.linkedin.com/in/chaithali-bodike-607a26324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app7}{LinkedIn} \quad
+		\faEnvelope\ \href{mailto:bodikechaithali@gmail.com}{bodikechaithali@gmail.com}
+	\end{minipage}%
+	\hfill
+	\begin{minipage}{0.15\textwidth}
+		\fbox{\includegraphics[width=\linewidth]{"/home/bodike/Desktop/Sem3/CSP203/Lab Activities/B24CS013_Bodike Chaithali_Assignment_03/Chaithali.jpeg"}}
+	\end{minipage}
+	
+	\vspace{0.5em}
+	
+	\begin{paracol}{2}
+		\setlength{\columnsep}{1cm}
+		
+		% LEFT COLUMN
+		\switchcolumn
+		\section*{Contact}
+		\begin{tabular}{@{}rl@{}}
+			\faPhone & +91-9182861715 \\
+			\faEnvelope & \href{mailto:bodikechaithali@gmail.com}{bodikechaithali@gmail.com} \\
+		\end{tabular}
+		
+		\section*{Skills}
+		\begin{itemize}
+			\item \textbf{Languages:} Python, JavaScript, HTML, CSS
+			\item \textbf{Frontend:} React, TailwindCSS, Bootstrap
+			\item \textbf{DataBase:} SQLite
+			\item \textbf{Tools:} Git/GitHub, VS Code, \LaTeX
+		\end{itemize}
+		
+		\section*{Certifications}
+		\begin{itemize}
+			\item Certificate of Appreciation – Static \& Dynamic Website Development
+			\item Certificate – Responsive Website Development
+			\item Participation – AI Workshop
+			\item Certificate – Corporate Readiness \& Career Impact Skills (Define Career)
+		\end{itemize}
+		
+		\section*{Projects}
+		\textbf{OpenLake Website} \hfill \href{https://openlakeweb.vercel.app/}{Link}
+		\begin{itemize}
+			\item Developed responsive frontend using React.
+			\item Improved project workflows and documentation to support multiple contributors.
+		\end{itemize}
+		\textbf{CCPS Portal} 
+		\begin{itemize}
+			\item Full-stack portal for user management and dynamic content updates.
+			\item Implemented REST APIs for seamless data operations; deployed on cloud platform.
+		\end{itemize}
+		\textbf{Static Restaurant Website} 
+		\begin{itemize}
+			\item Designed and deployed a responsive restaurant website using HTML, CSS, Bootstrap.
+			\item Integrated menu, reservation form, and contact functionality with modern UI.
+		\end{itemize}
+		
+		% RIGHT COLUMN
+		\switchcolumn
+		
+		\section*{Education}
+		\begin{itemize}
+			\item \textbf{B.Tech — Computer Science and Engineering} \hfill 05/2028\\
+			IIT Bhilai – Durg, Chhattisgarh, India
+			\item \textbf{Intermediate (PCM)} \hfill 04/2024\\
+			Resonance Junior College – Adilabad, Telangana\\
+			\emph{95.8\%; Top 10\% of class}
+			\item \textbf{Secondary Education} \hfill 05/2022\\
+			C Ram Reddy Memorial School – Adilabad, Telangana\\
+			\emph{9.8 CGPA; Ranked 2nd in class}
+		\end{itemize}
+		
+		\section*{Experience}
+		\textbf{Maintainer of OpenLake} \hfill 08/2025 -- Present\\
+		IIT Bhilai – Durg, Chhattisgarh, India
+		\begin{itemize}
+			\item Contributed innovative ideas and implemented solutions to improve project workflows.
+			\item Developed 5+ new features for OpenLake, improving workflow efficiency by 30\%.  
+			\item Resolved 5+ weekly project issues, accelerating project delivery timelines. 
+		\end{itemize}
+		
+		\section*{Achievements}
+		\begin{itemize}
+			\item Cleared ATF Stage-I \& Stage-II; ranked in top 1\% among 2.5L+ applicants pan India.
+			\item Contributed regularly to OpenLake, improving team delivery efficiency by 30\%.
+			\item Completed AI \& Web Development workshops; implemented real-world projects.
+			\item Developed an AI system using APIs and LLMs to automate calls, reducing manual effort for repetitive tasks.
+		\end{itemize}
+		
+	\end{paracol}
+\end{document}

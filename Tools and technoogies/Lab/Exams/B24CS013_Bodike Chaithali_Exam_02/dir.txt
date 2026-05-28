@@ -1,0 +1,5 @@
+user1:CSE:student
+user2:ME:faculty
+user3:CSE:staff
+user4:ME:student
+user5:CSE:faculty

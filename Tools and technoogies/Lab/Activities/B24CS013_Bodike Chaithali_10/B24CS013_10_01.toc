@@ -1,0 +1,11 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Why Beamer?}{5}{0}{2}
+\beamer@sectionintoc {3}{Features}{19}{0}{3}
+\beamer@sectionintoc {4}{Highlighting Texts}{28}{0}{4}
+\beamer@sectionintoc {5}{Mathematical Concepts}{30}{0}{5}
+\beamer@sectionintoc {6}{Linear Search Algorithm}{33}{0}{6}
+\beamer@sectionintoc {7}{Images}{36}{0}{7}
+\beamer@sectionintoc {8}{Important Equations}{38}{0}{8}
+\beamer@sectionintoc {9}{Conclusion}{40}{0}{9}
+\beamer@sectionintoc {10}{References}{46}{0}{10}
+\beamer@sectionintoc {11}{Thank You}{49}{0}{11}

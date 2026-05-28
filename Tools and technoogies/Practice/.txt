@@ -1,0 +1,8 @@
+Hello, World!
+/bin/bash
+/home/bodike/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+bodike-chaithali
+/home/bodike
+Tuesday 26 August 2025 04:07:56 PM IST
+3523
+

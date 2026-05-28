@@ -1,0 +1,18 @@
+ \     backslash
+
+            alert (BEL)
+
+            backspace
+
+            escape
+
+            form feed
+
+       
+     new line
+
+            carriage return
+
+       	     horizontal tab
+
+            vertical tab 

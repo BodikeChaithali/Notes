@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{goossens1994latexcompanion}
+Michel Goossens, Frank Mittelbach, and Alexander Samarin.
+\newblock The latex companion.
+\newblock In {\em Proceedings of the TeX Users Group Meeting}. TUG, 1994.
+
+\bibitem{knuth1984tex}
+Donald~E. Knuth.
+\newblock The texbook.
+\newblock {\em Computers \& Mathematics with Applications}, 9(1):1--12, 1984.
+
+\bibitem{lamport1994latex}
+Leslie Lamport.
+\newblock {\em LaTeX: A Document Preparation System}.
+\newblock Addison-Wesley, 2 edition, 1994.
+
+\end{thebibliography}

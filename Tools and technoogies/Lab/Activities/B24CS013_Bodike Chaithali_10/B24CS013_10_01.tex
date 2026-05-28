@@ -1,0 +1,263 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{crane} 
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+\usepackage{graphicx}      
+\usepackage{amsmath,amssymb} 
+\usepackage{booktabs}      
+\usepackage{algorithm}     
+\usepackage{algpseudocode} 
+\usepackage{capt-of}       
+\usepackage{hyperref}   
+\logo{\includegraphics[height=1.3cm]{"/home/bodike/Desktop/B24CS013_Bodike Chaithali_10/iit-bhilai.jpg"}\hspace{0.5cm}}
+\setbeamercolor{background canvas}{bg=blue!15}
+\setbeamercolor{title}{bg=yellow, fg=black}
+\setbeamercolor{frametitle}{bg=yellow, fg=black}
+\setbeamercolor{footline}{bg=yellow, fg=black}
+\setbeamercolor{block title}{bg=yellow!80, fg=black}  
+\setbeamercolor{block body}{bg=yellow!20, fg=black} 
+\setbeamercolor{block title alerted}{bg=red!70, fg=white}
+\setbeamercolor{block body alerted}{bg=red!20, fg=black} 
+\setbeamercolor{block title example}{bg=green!60, fg=white}
+\setbeamercolor{block body example}{bg=green!20, fg=black}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamertemplate{footline}{%
+	\leavevmode%
+	\hbox{%
+		\begin{beamercolorbox}[wd=.33\paperwidth,ht=3ex,dp=1ex,left]{footline}%
+			\hspace{7mm} Anand, Arindam (IIT)
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.34\paperwidth,ht=3ex,dp=1ex,center]{footline}%
+			Beamer Lab Activity - 3
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.33\paperwidth,ht=3ex,dp=1ex,right]{footline}%
+			Beamer 2025 \hspace{5em} \insertframenumber/\inserttotalframenumber \hspace{2mm}
+		\end{beamercolorbox}%
+	}%
+}
+
+\title[Beamer Lab Activity - 3]{Software Tools and Technologies Laboratory\\Latex Lab Activity - 3: Beamer}
+\author[Anand, Arindam]{Anand M. Baswade\inst{1} \and Arindam Chakraborty\inst{2}}
+\institute[IIT]
+{
+	\inst{1}
+	Faculty of Computer Science and Engineering\\Indian Institute of Technology, Bhilai
+	\and
+	\inst{2}
+	M.Tech Student of Computer Science and Engineering\\Indian Institute of Technology, Bhilai
+}
+\date{\today}
+\AtBeginSection[]{
+	\begin{frame}<beamer>
+		\frametitle{Table of Contents}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+\bibliographystyle{plain}
+\begin{document}
+	\frame{\titlepage}
+	\begin{frame}
+		\frametitle{Table of Contents}
+		\tableofcontents
+	\end{frame}
+	\section{Introduction}
+	\begin{frame}{Introduction to \LaTeX{} Beamer}
+		\begin{itemize}
+			\item \LaTeX{} Beamer is a powerful class for creating presentations.
+			\item It allows:
+			\begin{itemize}
+				\item Professional-quality slides
+				\item Mathematical equations
+				\item Figures, tables, and references
+				\item Animations and overlays
+			\end{itemize}
+			\item Advantages:
+			\begin{itemize}
+				\item Consistent formatting
+				\item Easy handling of citations and references
+				\item Cross-platform PDF output
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	\section{Why Beamer?}
+	\begin{frame}{Why Use Beamer?}
+		\begin{itemize}[<+->]
+			\item Beamer is designed for creating professional presentations directly in \LaTeX{}.
+			\item Consistent and elegant design
+			\item Full support for mathematical equations
+			\item Easy management of references and citations
+			\item Portable PDF output (works everywhere)
+			\item Highly customizable (themes, colors, backgrounds, animations)
+			\item Free and open-source — no licensing issues
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{Comparison with Other Tools}
+		\begin{table}
+			\centering
+			\begin{tabular}{|p{0.3\textwidth}|p{0.3\textwidth}|p{0.3\textwidth}|}
+				\hline
+				\onslide<1->{Feature} & \onslide<1->{Beamer} & \onslide<1->{PowerPoint} \\
+				\hline
+				\onslide<1->{Equations} & \onslide<2->{Excellent} & \onslide<2->{Limited} \\
+				\onslide<1->{Citations} & \onslide<3->{Automatic} & \onslide<3->{Manual} \\
+				\onslide<1->{Portability} & \onslide<4->{PDF (stable)} & \onslide<4->{File-dependent} \\
+				\onslide<1->{Cost} & \onslide<5->{Free} & \onslide<5->{Proprietary} \\
+				\onslide<1->{Customization} & \onslide<6->{High (code-based)} & \onslide<6->{Moderate (GUI-based)} \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{frame}
+	\section{Features}
+	\begin{frame}{Key Features of \LaTeX\ Beamer}
+		\begin{block}{Presentation Design}
+			\begin{itemize}
+				\item<1-> Predefined professional themes for elegant slides
+				\item<2-> Customizable colors, fonts, and backgrounds
+				\item<3-> High-quality PDF output across platforms
+			\end{itemize}
+		\end{block}
+		\begin{block}{Content Capabilities}
+			\begin{itemize}
+				\item<4-> Full support for complex mathematical equations
+				\item<5-> Easy insertion of tables, figures, and graphics
+				\item<6-> Step-by-step content reveal using overlays
+			\end{itemize}
+		\end{block}
+		\begin{block}{References \& Automation}
+			\begin{itemize}
+				\item<7-> Integration with Bib\TeX{} for automatic citations
+				\item<8-> Efficient workflow for large, structured presentations
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	\section{Highlighting Texts}
+	\begin{frame}{Blocks and Highlights Example}
+		Some important text can be \alert{highlighted} to attract attention.
+		\begin{block}{Remark}
+			This is a normal block. It wraps the text in a box with the same style as
+			the presentation. The text after the block title is the content.
+		\end{block}
+		\begin{alertblock}{Important Theorem}
+			This is an alert block. It contrasts with the regular presentation style,
+			useful to emphasize key results or theorems.
+		\end{alertblock}
+		\begin{exampleblock}{Examples}
+			This is an example block. It is similar to a normal block, but has a
+			different style (less contrasting than alertblock). Perfect for examples.
+		\end{exampleblock}
+	\end{frame}
+	
+	\section{Mathematical Concepts}
+	\begin{frame}{Definition}
+		\begin{definition}
+			A \alert{prime number} is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+		\end{definition}
+	\end{frame}
+	
+	\begin{frame}{Theorem \& Lemma}
+		\begin{theorem}
+			\alert{Fundamental Theorem of Arithmetic:} Every integer greater than 1 is either a prime or can be written as a unique product of prime numbers.
+		\end{theorem}
+		\begin{lemma}
+			If a prime $p$ divides a product $ab$, then $p$ divides $a$ or $p$ divides $b$.
+		\end{lemma}
+	\end{frame}
+	\newcounter{algorithmCounter} 
+	\setcounter{algorithmCounter}{0}
+	\section{Linear Search Algorithm}
+	\begin{frame}{Linear Search Algorithm}
+		\stepcounter{algorithmCounter}
+		\textbf{Input:} Array $A$ of size $n$, key to search \\
+		\textbf{Output:} Index of key in $A$, or -1 if not found
+		
+		\medskip
+		for $i \gets 0$ to $n-1$ do\\
+		\quad if $A[i] = \text{key}$ then\\
+		\quad\quad return $i$;\\
+		\quad end if\\
+		end for\\
+		return -1;
+		
+		\medskip
+		\centering
+		\textbf{Algorithm \thealgorithmCounter: Linear Search}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Corollary \& Proof}
+		\begin{block}{Corollary}
+			\emph{The factorization of any integer into primes is unique up to the order of the factors.}
+		\end{block}
+		
+		\begin{block}{Proof}
+			Suppose $n$ has two different prime factorizations. By the lemma, every prime in one factorization divides one of the primes in the other factorization. This leads to a contradiction, proving uniqueness.
+		\end{block}
+	\end{frame}
+	\section{Images}
+	\begin{frame}{Including an Image in a Block}
+		\begin{block}{Example Image}
+			\centering
+			\includegraphics[scale=0.5]{"/home/bodike/Desktop/B24CS013_Bodike Chaithali_10/overleaf-logo.png"}
+			\captionof{figure}{This is a sample image included in a Beamer slide.}
+		\end{block}
+	\end{frame}
+	
+	\section{Important Equations}
+	\begin{frame}
+		\frametitle{Key Equations in Signal Processing}
+		\begin{block}{Equation 1: Fourier Transform}
+			\[
+			X(f) = \int_{-\infty}^{\infty} x(t)e^{-j2\pi ft}dt
+			\]
+		\end{block}
+		\begin{block}{Equation 2: Convolution Integral}
+			\[
+			y(t) = \int_{-\infty}^{\infty} x(\tau)h(t-\tau)d\tau
+			\]
+		\end{block}
+		\begin{block}{Equation 3: Transfer Function of LTI System}
+			\[
+			H(f) = \frac{Y(f)}{X(f)} = \int_{-\infty}^{\infty}h(t)e^{-j2\pi ft}dt
+			\]
+		\end{block}
+	\end{frame}
+	
+	\section{Conclusion}
+	\begin{frame}{Conclusion}
+		\begin{itemize}[<+->]
+			\item \LaTeX{} Beamer is a powerful tool for creating professional presentations.
+			\item It supports complex mathematical equations, figures, tables, and
+			references.
+			\item Overlays and incremental reveals help guide the audience’s focus.
+			\item Highly customizable themes, colors, and backgrounds make slides
+			visually appealing.
+			\item Ideal for academic and technical presentations due to its precision and
+			portability.
+		\end{itemize}
+	\end{frame}
+	
+	\section{References}
+	\begin{frame}[allowframebreaks]
+		\frametitle{References}
+		This presentation is based on the following references:
+		\begin{itemize}
+			\item \cite{goossens1994latexcompanion} for basic \LaTeX{} concepts.
+			\item \cite{knuth1984tex} for fundamental \TeX{} understanding.
+			\item \cite{lamport1994latex} for advanced \LaTeX usage.
+			\item \cite{mittelbach2004}for best practices in document preparation.
+			\item \cite{kopka2003} for graphics and presentation guidelines in \LaTeX.
+			
+			\bibliography{ref}
+		\end{itemize}
+	\end{frame}
+	
+	\section{Thank You}
+	\begin{frame}{Thank You!}
+		\centering
+		\Huge Thank You!\\[1em] \LARGE Any Questions?\\[1em]
+		\includegraphics[scale=0.1]{"/home/bodike/Desktop/B24CS013_Bodike Chaithali_10/iit-bhilai.jpg"}
+	\end{frame}
+	
+\end{document} 

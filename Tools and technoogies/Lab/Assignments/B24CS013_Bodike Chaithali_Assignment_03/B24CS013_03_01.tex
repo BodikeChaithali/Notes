@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{url}
+\geometry{margin=1in}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}[section]
+\title{\underline{Exerpts}}
+\author{}
+\date{}
+\begin{document}
+	\maketitle
+	\section{Analytic Equations}
+	The famous formula of Leibniz involving $\pi$ is
+	\begin{equation}\label{eq:eq1}
+		\frac{\pi}{4}=1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\frac{1}{9}-\cdots=\sum_{k\geq0}\frac{(-1)^k}{2k+1}.
+	\end{equation}
+	However, (\ref{eq:eq1}) converges far too slowly to be a practical method of approximating $\pi$.
+	
+	Euler’s integral formula for $n!$ is
+	\begin{equation*}\label{eq:eq2}
+		n! = \int_{0}^{\infty} x^n e^{-x}\, dx.
+	\end{equation*}
+	The right side makes sense at $n = \tfrac{1}{2}$ and can be evaluated explicitly:
+	\begin{equation*}\label{eq:eq3}
+		\int_{0}^{\infty} \sqrt{x}\, e^{-x}\, dx = \frac{\sqrt{\pi}}{2}.
+	\end{equation*}
+	This suggests defining
+	$(\frac{1}{2})! = \frac{\sqrt{\pi}}{2}.$
+	
+	For $a \in \mathbb{R}$ and a function $f:\mathbb{R} \to \mathbb{R}$, 
+	the derivative of $f$ at $a$ is
+	\begin{align*}\label{eq:eq4}
+		f'(a) &= \lim_{h \to 0} \frac{f(a+h) - f(a)}{h} \\
+		& = \lim_{x \to a} \frac{f(x)-f(a)}{x-a}.
+	\end{align*}
+	The formula for differentiation under the integral sign says that under suitable conditions,
+	\begin{equation*}\label{eq:eq5}
+		\frac{d}{dt} \int_a^b f(x,t)\, dx = \int_a^b \frac{\partial f}{\partial t}(x,t)\, dx.
+	\end{equation*}
+	
+	More formulas like this can be found in the book \textcolor{red}{\cite{rubin1976}}.
+	
+	\section{Areas}
+	
+	If we are dealing with lattice polygons that are not simple, then we can use the following extension of Pick’s Theorem.
+	
+	\begin{theorem}\label{th:th1}
+		For a lattice polygon $P$ containing $h$ holes with a boundary of $h+1$ simple closed curves, its area is given by
+		\begin{equation*}
+		A(P) = I(P) + \frac{B(P)}{2} + h - 1,
+		\end{equation*}
+		where $I(P)$ is the number of interior lattice points of $P$ and $B(P)$ is the number of boundary lattice points of $P$.
+	\end{theorem}
+	
+	We now review the definition of Euler characteristic for a convex polyhedron.
+	
+	\begin{definition}\label{df:df1}
+		The Euler characteristic of a convex polyhedron $P$ with $V$ vertices, $E$ edges, and $F$ faces is
+		$\chi(P) = V - E + F.$
+	\end{definition}
+	
+	Next, we recall Euler’s formula.
+	
+	\begin{theorem}[Euler’s Formula]\label{th:th2}
+		For any convex polygon $P$ with Euler characteristic $\chi(P)$, we have that
+		\begin{equation}\label{eq:eq6}
+		\chi(P) = 2.
+		\end{equation}
+	\end{theorem}
+	
+	We will now generalize Theorem \textcolor{blue}{\ref{th:th1}} by incorporating the Euler characteristic, which will allow us to find the area $A(P)$ of any lattice polygon $P$ that is the union of a finite number of simple lattice polygons. This more general area formula is given by
+	\begin{equation}\label{eq:eq8}
+	A(P) = V - \frac{1}{2}E_B - \chi(P),
+	\end{equation}
+	where $V$ is the total number of vertices (lattice points) of $P$, $E_B$ is the number of boundary points on the edges of $P$, and $\chi(P)$ is the Euler characteristic of $P$.
+	
+	Note that, by Definition \textcolor{blue}{\ref{df:df1}}, the Euler characteristic of a simple lattice polygon (one with no holes) is $\chi(P) = 1$ and, by definition, $E_B = B(P)$. Furthermore, the Euler characteristic of a lattice polygon $P$ containing $h$ separate holes can be shown to be $\chi(P) = 1-h$. We will now use Equation (\textcolor{blue}{\ref{eq:eq6}}) to prove the generalized area formula given by Equation (\textcolor{blue}{\ref{eq:eq8}}).
+	
+	\section{Matrix Equations}
+	
+	Operations on diagonal matrices are easy. For instance,
+	\begin{equation*}
+	D = \begin{pmatrix}
+		x & 0 & 0 \\
+		0 & y & 0 \\
+		0 & 0 & z
+	\end{pmatrix}
+	\quad \implies \quad
+	D^3 = \begin{pmatrix}
+		x^3 & 0 & 0 \\
+		0 & y^3 & 0 \\
+		0 & 0 & z^3
+	\end{pmatrix}.
+	\end{equation*}
+	
+	The transpose of a row vector $a = (a_1, a_2, \ldots, a_n)$ is
+	\begin{equation*}
+	a^\top = \begin{pmatrix}
+		a_1 \\ a_2 \\ \vdots \\ a_{n-1} \\ a_n
+	\end{pmatrix}.
+	\end{equation*}
+	\begin{remark}
+		If you want to use \LaTeX\ to edit a math page on Wikipedia, look at \textcolor{red}{[Wik19]}.
+	\end{remark}
+	\begin{thebibliography}{9}
+		\bibitem[Rub76]{rubin1976}
+		Walter Rudin. \emph{Principles of Mathematical Analysis}. 
+		McGraw-Hill, New York, 1976.
+		
+		\bibitem[Wik19]{Wik19}
+		Wikipedia. \textcolor{blue}{\url{https://en.wikipedia.org/wiki/Help:Displaying_a_formula},} 2019. Accessed 21-January-2020.
+	\end{thebibliography}
+	
+\end{document}

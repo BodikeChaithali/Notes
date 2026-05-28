@@ -1,0 +1,231 @@
+\documentclass[pdf]{beamer}
+\usetheme{Madrid}
+\usecolortheme{crane}
+\setbeamercolor{background canvas}{bg=blue!15}
+\title[Beamer Lab Activity - 3]{Software Tools and Technologies Laboratory}
+\subtitle{Latex Lab Activity - 3: Beamer}
+\author[Anand, Arindam]{Anand M. Baswade\inst{1} \and Arindam Chakraborty\inst{2}}
+\institute[IIT]{
+	\inst{1}
+	Faculty of Computer Science and Engineering \\
+	Indian Institute of Technology, Bhilai 
+	\and
+	\inst{2}
+	M.Tech Student of Computer Science and Engineering \\
+	Indian Institute of Technology, Bhilai
+}
+\date[Beamer 2025]{\today}
+\logo{\includegraphics[width=0.15\textwidth]{/home/bodike/Desktop/Sem3/CSP203/Practice/iit-bhilai.jpg}}
+\AtBeginSection[]
+{
+	\begin{frame}{Table of Contents}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\begin{document}
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	\begin{frame}{Table of Contents}
+		\tableofcontents
+	\end{frame}
+	\section{Introduction}
+	\begin{frame}{Introduction}
+		\begin{itemize}
+			\item \LaTeX Beamer is a powerful class for creating presentations.
+			\item It allows:
+			\begin{itemize}
+				\item Professional-quality slides
+				\item Mathematical equations
+				\item Figures, tables, and references
+				\item Animations and overlays
+			\end{itemize}
+			\item Advantages:
+			\begin{itemize}
+				\item Consistent formatting
+				\item Easy handling of citations and references
+				\item Cross-platform PDF output
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\section{Why Beamer?}
+	\begin{frame}{Why Beamer?}
+		\begin{itemize}
+			\item Beamer is designed for creating professional presentations directly in
+			\LaTeX. \pause
+			\item Consistent and elegant design \pause
+			\item Full support for mathematical equations \pause
+			\item Easy management of references and citations \pause
+			\item Portable PDF output (works everywhere) \pause
+			\item Highly customizable (themes, colors, backgrounds, animations) \pause
+			\item Free and open-source — no licensing issues
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Comparison with Other Tools}
+		\begin{table}
+			\centering
+			\begin{tabular}{|c|c|c|}
+				\hline
+				\onslide<1->{Feature} & \onslide<1->{Beamer} & \onslide<1->{PowerPoint} \\ \hline
+				\onslide<1->{Equations} & \onslide<1->{Excellent} & \onslide<1->{Limited} \\ 
+				\onslide<1->{Citations} &  \onslide<2->{Automatic} & \onslide<2->{Manual} \\
+				\onslide<1->{Portability} & \onslide<3->{PDF} & \onslide<3->{File-dependent} \\
+				\onslide<1->{Cost} & \onslide<4->{Free} & \onslide<4->{Proprietary} \\
+				\onslide<1->{Customization} & \onslide<5->{High (code-based)} & \onslide<5->{Moderate (GUI-based)}\\ \hline
+			\end{tabular}
+		\end{table}
+	\end{frame}
+	\section{Features}
+	\begin{frame}{Key Features of \LaTeX Beamer}
+			\begin{block}{Presentation Design}
+				\begin{itemize}
+				\item Predefined professional themes for elegant slides 
+				\item<2-> Customizable colors, fonts, and backgrounds
+				\item<3-> High-quality PDF output across platforms 
+		\end{itemize}
+			\end{block}
+		\begin{block}{Content Capabilities}
+			\begin{itemize}
+				\item<4-> Full support for complex mathematical equations
+				\item<5-> Easy insertion of tables, figures, and graphics
+				\item<6-> Step-by-step content reveal using overlays
+			\end{itemize}
+		\end{block}
+	\begin{block}{References \& Automation}
+		\begin{itemize}
+			\item<7-> Integration with BibTeX for automatic citations
+			\item<8-> 
+			Efficient workflow for large, structured presentations
+		\end{itemize}
+	\end{block}
+	\end{frame}
+	\section{Highlighting Texts}
+	\begin{frame}{Blocks and Highlights Example}
+		Some important text can be \textcolor{red}{highlighted} to attract attention.
+		\begin{block}{Remark}
+			This is a normal block. It wraps the text in a box with the same style as
+			the presentation. The text after the block title is the content.
+		\end{block}
+		\begin{alertblock}{Important Theorem}
+			This is an alert block. It contrasts with the regular presentation style,
+			useful to emphasize key results or theorems.
+		\end{alertblock}
+		\begin{example}
+			This is an example block. It is similar to a normal block, but has a
+			different style (less contrasting than alertblock). Perfect for examples.
+		\end{example}
+	\end{frame}
+	\section{Mathematical Concepts} 
+	\begin{frame}{Definition}
+		\begin{block}{Definition}
+			A \textcolor{red}{prime number} is a natural number greater than 1 that has no positive
+			divisors other than 1 and itself.
+		\end{block}
+	\end{frame}
+	\begin{frame}{Theorem \& Lemma}
+		\begin{block}{Theorem}
+			\emph{\textcolor{red}{Fundamental Theorem of Arithmetic:} Every integer greater than 1 is
+			either a prime or can be written as a unique product of prime numbers.}
+		\end{block} 
+		\begin{block}{Lemma}
+			\emph{If a prime p divides a product ab, then p divides a or p divides b.}
+		\end{block}
+	\end{frame}
+	\section{Linear Search Algorithm}
+	\begin{frame}{Linear Search Algorithm}
+				\begin{algorithmic}
+					\State \textbf{Input:} Array $A$ of size $n$, key $key$ to search
+					\State \textbf{Output:} Index of key in $A$, or $-1$ if not found
+					\For{$i \gets 0$ to $n - 1$}
+					\If{$A[i] = key$}
+					\State \Return $i$
+					\EndIf
+					\EndFor
+					\State \Return $-1$
+				\end{algorithmic}
+			\centering
+			\textbf{Algorithm 1:} Linear Search
+	\end{frame}
+	\begin{frame}{Corollary \& Proof}
+		\begin{block}{Corollary}
+			\emph{The factorization of any integer into primes is unique up to the order of
+				the factors.}
+		\end{block}
+	\begin{block}{Proof}
+		Suppose $n$ has two different prime factorizations. By the lemma, every
+		prime in one factorization divides one of the primes in the other
+		factorization. This leads to a contradiction, proving uniqueness.
+	\end{block}
+	\end{frame}
+	\section{Images}
+	\begin{frame}{Including an Image in a Block}
+		\begin{block}{Example Image}
+			\begin{figure}
+				\includegraphics[width=0.7\textwidth]{/home/bodike/Desktop/Sem3/CSP203/Practice/overleaf-logo.png}
+				\caption{This is a sample image included in a Beamer slide.}
+			\end{figure}
+		\end{block}
+	\end{frame}
+	\section{Important Equations}
+	\begin{frame}{Key Equations in Signal Processing}
+		\begin{block}{Equation 1: Fourier Transform}
+			\begin{equation*}
+				\label{eq:1}
+				X(f)=\int_{-\infty}^{\infty} x(t)e^{-j2\pi ft} dt
+			\end{equation*}
+		\end{block}
+	\begin{block}{Equation 2: Convolution Integral}
+		\begin{equation*}
+			\label{eq:2}
+			y(t)=\int_{-\infty}^{\infty} x(\tau)h(t-\tau)d\tau
+		\end{equation*}
+	\end{block}
+	\begin{block}{Equation 3: Transfer Function of LTI System}
+		\begin{equation*}
+			\label{eq:3}
+			H(f)=\frac{Y(f)}{X(f)} = \int_{-\infty}^{\infty} h(t)e^{-j2\pi ft}dt
+		\end{equation*}
+	\end{block}
+	\end{frame}
+	\section{Conclusion}
+	\begin{frame}{Conclusion}
+		\begin{itemize}
+			\item \LaTeX Beamer is a powerful tool for creating professional, structured
+			presentations.\pause
+			\item It supports complex mathematical equations, figures, tables, and
+			references.\pause
+			\item Overlays and incremental reveals help guide the audience’s focus.\pause
+			\item Highly customizable themes, colors, and backgrounds make slides
+			visually appealing.\pause
+			\item Ideal for academic and technical presentations due to its precision and
+			portability.
+		\end{itemize}
+	\end{frame}
+	\section{References}
+	\begin{frame}[allowframebreaks]{References}
+		This presentation is based on the following references:
+		\begin{itemize}
+			\item \cite{lamport1994latex} for basic \LaTeX concepts.
+			\item \cite{mittelbach2004latex} for fundamental \TeX understanding.
+			\item \cite{knuth1984texbook} for advanced \LaTeX usage.
+			\item \cite{goossens1994latex} for best practices in document preparation.
+			\item \cite{kopka2003guide} for graphics and presentation guidelines in \LaTeX.
+		\end{itemize}
+		\bibliographystyle{plain}
+		\bibliography{Lab2}
+	\end{frame}
+	\section{Thank You}
+	\begin{frame}{Thank You}
+		\centering
+		\Huge \textbf{Thank You!} \\
+		\vspace{0.5cm}
+		\large \text{Any Questions?} \\ 
+		\vspace{1cm}
+		\includegraphics[width=0.2\textwidth]{/home/bodike/Desktop/Sem3/CSP203/Practice/iit-bhilai.jpg}
+	\end{frame}
+	
+\end{document}

@@ -1,0 +1,3 @@
+This the the log.txt file.
+This the second line of the log.txt file.
+This is the 3rd line.

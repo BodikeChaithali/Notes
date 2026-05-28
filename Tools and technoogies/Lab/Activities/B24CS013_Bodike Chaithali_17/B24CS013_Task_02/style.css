@@ -1,0 +1,25 @@
+.box{
+    background-color: yellow;
+    border: 5px solid blue;
+    padding: 20px;
+    margin: 30px;
+    width: 30vw;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+.box:hover{
+    background-color: lightblue;
+    border-color: green;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+}
+.main-heading{
+    padding: 25px;
+}
+.main-heading:hover{
+    color: orange;
+}

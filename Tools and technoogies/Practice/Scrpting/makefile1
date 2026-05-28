@@ -1,0 +1,16 @@
+CC=gcc
+CFLAGS=-Wall -O2
+TARGET=SumSub
+all: $(TARGET)
+
+$(TARGET): main.o math.o
+	$(CC) $(CFLAGS) main.o math.o -o $(TARGET)
+
+main.o: main.c math.h
+	$(CC) -c main.c
+
+math.o: math.h math.c
+	$(CC) -c math.c
+
+clean:
+	rm -rf *.o $(TARGET)

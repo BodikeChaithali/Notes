@@ -1,0 +1,10 @@
+FILENAME=sample.txt
+
+create_file: 
+	echo "This is a sample file content" > $(FILENAME)
+
+print_file: 
+	@cat $(FILENAME)
+
+clean:
+	rm -f $(FILENAME)

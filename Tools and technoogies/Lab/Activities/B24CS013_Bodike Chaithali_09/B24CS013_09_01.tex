@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{amsmath , algorithmic ,natbib}
+\title{Introduction to LaTeX}
+\author{Bodike Chaithali \\ B24CS013}
+\date{\today}
+\begin{document}
+	\maketitle
+	\section*{Q1}
+	\begin{abstract}
+		An abstract reflecting on the role of LATEX in research writing \dots
+	\end{abstract}
+	\section{Introduction}
+	This is an introductory section.
+	\section{Methods}
+	This is an methods section.
+	\subsection{Data Collection}
+	This is an Data Collection SubSection in Methods section.
+	\subsection{Analysis}
+	This is an Analysis SubSection in Methods section.
+	\section{Conclusion}
+	This is an conclusion section.
+	\section*{Q2}
+	This line refers to the "Key Formula" by the equation number as \dots \ref{eq:euler}\\
+	\\
+	Euler's equation is :
+	\begin{equation}
+		e^{i\pi} + 1 =0
+		\label{eq:euler}
+	\end{equation} 
+	\section*{Q3}
+	\begin{table}[h]
+		\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Student & Math & Physics & CS \\
+		\hline
+		Alice & 99 & 98 & 97 \\
+		\hline
+		Bob & 95 & 97 & 99 \\
+		\hline
+		Charlie & 99 & 93 & 100 \\
+		\hline
+	\end{tabular}
+\end{table}
+	\section*{Q4}
+		\begin{algorithmic}
+			\STATE Input: integer  $n$
+			\IF{$n > 0$}
+				\STATE print "Positive"
+			\ELSIF{$n < 0$}
+				\STATE print "Negative"
+			\ELSE
+				\STATE print "Zero"
+			\ENDIF
+		\end{algorithmic}
+	\section*{Q5}
+	An 1st one \citet{knuth1984} and the 2nd one \citep{lamport1994} . 
+	\bibliographystyle{plainnat}
+	\bibliography{Lab2}
+\end{document}

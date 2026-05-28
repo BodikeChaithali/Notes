@@ -1,0 +1,113 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{paracol}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fontawesome}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\definecolor{sectioncolor}{HTML}{2E86AB}
+\titleformat{\section}{\large\bfseries\color{sectioncolor}}{}{0em}{}[\color{sectioncolor}\titlerule]
+\setlist[itemize]{leftmargin=*}
+\pagestyle{empty}
+\newcommand{\skillbar}[2]{%
+	\noindent\textbf{#1}\hfill#2\%\par
+	\begin{tikzpicture}
+		\pgfmathsetmacro{\barsize}{#2/100*6}
+		\draw[fill=black!7,draw=black!20] (0,0) rectangle (6,0.32);
+		\draw[fill=sectioncolor,draw=none] (0,0) rectangle (\barsize,0.32);
+	\end{tikzpicture}\par\vspace{6pt}
+}
+\usepackage{tikzpagenodes}
+\usepackage{everypage}
+
+\AddEverypageHook{%
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw[line width=1pt,color=black]
+		([xshift=0.4cm,yshift=0.4cm]current page.south west)
+		rectangle
+		([xshift=-0.4cm,yshift=-0.4cm]current page.north east);
+	\end{tikzpicture}%
+}
+\begin{document}
+	\begin{minipage}[t]{0.68\textwidth}
+		\vspace{0pt}
+		{\Huge\bfseries BODIKE CHAITHALI}\\[6pt]
+		{\large\scshape Frontend Developer}\\[4pt]
+		{\large\scshape Responsive Designer }\\[4pt]
+		\normalsize IIT Bhilai (CSE student)
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.28\textwidth}
+		\vspace{0pt}
+		\begin{tikzpicture}
+			\draw[black, line width=0.8pt, rounded corners=2pt]
+			(-0.1,-0.1) rectangle (3.3,3.3);
+			\node at (1.6,1.6) {\includegraphics[width=3.2cm,height=3.2cm,keepaspectratio]{/home/bodike/Desktop/Chaithali.jpeg}};
+		\end{tikzpicture}
+	\end{minipage}
+	\section*{Summary}
+	Dynamic Frontend Developer with a proven track record at IIITBhilai, excelling in project management and problem-solving. Leveraged expertise in Python and MongoDB to deliver innovative solutions, resolving project issues weekly and significantly enhancing team performance. Committed to continuous learning and applying advanced skills to drive exceptional outcomes.
+	\vspace{6pt}
+	\begin{paracol}{2}
+		\setlength{\columnsep}{1cm}
+		\switchcolumn
+		\section*{Contact}
+		\begin{tabular}{@{}rl@{}}
+			\faMapMarker & Adilabad, India 504001 \\
+			\faPhone & +91-9182861715 \\
+			\faEnvelope & \href{mailto:bodikechaithali@gmail.com}{bodikechaithali@gmail.com} \\
+		\end{tabular}
+		\section*{Skills}
+		\begin{itemize}
+		\item Frontend Development
+		\item Responsive Design
+		\item Project Management
+		\item Problem Solving
+		\item Git \& GitHub
+		\item Python
+		\item MongoDB
+		\end{itemize}
+		\section*{Certifications}
+		\begin{itemize}
+			\item Certificate of appreciation in Static and Dynamic Website Development
+			\item Certificate in Responsive Website Development
+			\item Participation certificate — AI Workshop
+			\item Certificate in Corporate Readiness and Career Impact Skills (Define Career)
+		\end{itemize}
+	
+	\section*{Achievements}
+	\begin{itemize}
+		\item Weekly issue resolution on projects leading to improved delivery cadence.
+		\item Multiple certificates in web development and AI workshops.
+	\end{itemize}
+		
+		\switchcolumn
+		\section*{Experience}
+		\textbf{Maintainer of Openlake} \hfill 08/2025 -- Present\\
+		IIIT Bhilai – Durg, Chhattisgarh, India
+		\begin{itemize}
+			\item Contributed innovative ideas and implemented solutions to improve team workflows and outcomes.
+			\item Maintained up-to-date project documentation and codebase; performed weekly issue triage and resolution.
+			\item Collaborated with teammates to deliver features and ensure high-quality outputs.
+		\end{itemize}
+		\section*{Education}
+		\begin{itemize}
+			\item \textbf{Bachelor of Technology — Computer Science and Engineering} \hfill 05/2028\\
+			Indian Institute of Information Technology Bhilai – Durg, Chhattisgarh, India
+			\item \textbf{Intermediate (PCM)} \hfill 04/2024\\
+			Resonance Junior College – Adilabad, Telangana, India\\
+			\emph{Passed out with 10 CGPA; Ranked in Top 10\% of class}
+			\item \textbf{Secondary Education} \hfill 05/2022\\
+			C Ram Reddy Memorial School – Adilabad, Telangana, India\\
+			\emph{Passed out with 9.8 CGPA; Ranked 2 in class}
+		\end{itemize}
+	\section*{Social}
+	\faGithub\ \href{https://github.com/BodikeChaithali}{GitHub} \quad
+	\faLinkedin\ \href{https://www.linkedin.com/in/chaitali-bodike-6702a427}{LinkedIn}
+	\end{paracol}
+\end{document}

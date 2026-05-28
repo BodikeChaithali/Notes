@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+
+\title{Learning \LaTeX\ Through a Simple Article}
+\author{Kotapati Sai Mounika B24CS019}
+\date{04/09/2025}
+
+\begin{document}
+	\maketitle
+	
+	\section{Introduction}
+	This article is designed to show how a complete \LaTeX\ document looks. It
+	demonstrates document classes, titles, sectioning, lists, and mathematical
+	symbols.
+	
+	\subsection{Motivation}
+	\LaTeX\ is used for producing professional documents.
+	
+	\subsubsection{Why Students Need It}
+	Because it ensures formatting is consistent.
+	
+	\textbf{Key Point} Learning \LaTeX\ early saves time in research.
+	
+	\textbf{Mini Note} Even small reports benefit from \LaTeX.
+	
+	\section{Organizing Information}
+	Information is often presented as lists. \LaTeX\ supports both itemized and
+	numbered lists.
+	
+	\subsection{Custom Itemize}
+	\begin{itemize}[label=$\bullet$]
+		\item Normal bullet
+		\item[\!] Urgent task
+		\item[$\blacksquare$] Completed work
+	\end{itemize}
+	
+	\textbf{NOTE} Special note
+	
+	\subsection{Numbered List}
+	\begin{enumerate}
+		\item First numbered point
+		\item[\!] Custom exclamation
+		\item[$\blacksquare$] Black square instead of number
+		\item[NOTE] Replace number with text
+	\end{enumerate}
+	
+	\subsection{Nested Example}
+	\begin{enumerate}
+		\item Outer Level
+		\begin{itemize}
+			\item Inner bullet
+		\end{itemize}
+	\end{enumerate}
+	
+	\textbf{Note:} This is a note
+	
+	\textbf{Wait!} This is a warning
+	
+	\section{Mathematics in Action}
+	By practicing this, you now cover all the essential commands from the tutorial.
+	
+	\subsection{Summation Example}
+	\[
+	S_n = \frac{1}{n} \sum_{k=1}^{n} \frac{k^2 + k + 1}{k^2 + 1}
+	\]
+	
+	\subsection{Geometric Series}
+	\[
+	1 + r + r^2 + r^3 + \cdots + r^n = \frac{1 - r^{n+1}}{1-r}
+	\]
+	
+\end{document}

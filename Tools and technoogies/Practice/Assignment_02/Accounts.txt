@@ -1,0 +1,5 @@
+Account Name,Card Number, Email ID,Balance
+Bodike Chaithali,1234 5678 9012 3456,chaithalib@iitbhilai.ac.in,2000
+Bodike SriCharan,2345 6789 0123 4567,sricharan@gmail.com,10000
+Bodike Ushanna,3456 7890 1234 5678,ushanna@yahoo.in,200000
+Bodike Swathi,4567 8901 2345 6789,swathi.bk@gmail.com,230000

@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{algorithmic,algorithm2e}
+\usepackage{natbib}
+\title{Introduction to LaTeX}
+\author{Bodike Chaithali \\ B24CS013}
+\date{\today}
+\begin{document}
+	\maketitle
+	\begin{abstract}
+		An abstract reflecting on the role of \LaTeX in research writing\ldots
+	\end{abstract}
+	\section*{Q1 Title, Abstract, and Structure}
+	\section{Introduction}
+	This is an Introduction section.
+	Euler’s \eqref{eq:1}
+	\section{Methods}
+	This is an Methods section. 
+	\subsection{Data Collection}
+	This is an Data Collection subsection in the section of Methods.
+	\subsection{Analysis}
+	This is an Analysis subsection in the section of Methods.
+	\section{Conclusion}
+	This is the Conclusion section.
+	\section*{Q2 Cross-References with Equations}
+	In the Introduction, refer to a ``key formula" by its equation number. In the Results section,
+	typeset Euler’s identity:
+	\begin{equation}
+		\label{eq:1}
+		e^{i\pi}+ 1 =0
+	\end{equation}
+	Label the equation and ensure that the earlier reference points to it correctly.
+	\section*{Q4 Table}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Student & Math & Physics & CS \\ \hline
+			Alice & 79 & 80 & 59 \\ \hline
+			Bob & 80 & 57 & 58 \\ \hline
+			Charlie & 79 & 36 & 69 \\ \hline 
+		\end{tabular}
+	\end{table}
+	\section*{Q4 Algorithm}
+	\begin{algorithm}
+		\If{$i \ge 0$}{print:Positive}
+		\eIf{$i \le 0$}{print:Negative}{print:Zero}
+	\end{algorithm}
+	\section*{Q5 Bibliography and Citations}
+	This is \cite{turing1950computing} and 
+	\citep{knuth1997art} \\
+	\citet{turing1950computing}
+	\bibliography{lab.bib}
+	\bibliographystyle{plainnat}
+\end{document}

@@ -1,0 +1,17 @@
+CC=gcc
+CFLAGS=-Wall -O2 -I.
+OBJ=main1.o functions.o
+TARGET=pragram
+all: $(TARGET)
+
+$(TARGET): $(OBJ)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJ)
+
+main1.o: main1.c functions.h
+	$(CC) $(CFLAGS) -c main1.c -o main1.o
+
+functions.o: functions.c functions.h
+	$(CC) $(CFLAGS) -c functions.c -o functions.o
+
+clean:
+	rm -rf *.o $(TARGET)

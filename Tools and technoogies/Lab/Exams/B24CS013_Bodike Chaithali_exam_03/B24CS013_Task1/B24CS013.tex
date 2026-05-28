@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\title{CSP 203: Software Tools and Technologies \\
+	(Question 1)}
+\author{Bodike Chaithali (B24CS013)}
+\date{\today}
+\usepackage{amsmath,amssymb,amsthm,graphicx}
+\usepackage{algorithmic}
+\usepackage{float}
+\begin{document}
+	\maketitle
+	\section{Introduction}
+	Live streaming is a powerful and direct way to get connected with thou-
+	sands of concurrent viewers. No matter if you are using it for your product
+	promotion, giving a motivating speech, or just want to stream the game.
+	\subsection{Usage}
+	It is a tool to circulate information in the form of videos. Users can enjoy
+	the audio and video without waiting for their file to download.
+	\subsection{Statistics}
+	As live is on rise Halder et al. \cite{size2020video}, the demand for high-quality and lower
+	latency services is increasing. Thus, efficient, scalable, and economical solu-
+	tions are required for live video streaming.
+	
+	
+	According to the report of Business Fortune Insights, the global video
+	streaming market size is expected to grow from USD 342.44 billion in 2019
+	to USD 842.93 billion by 2027 at a compound annual growth rate of 12
+	Size \cite{halder2021fybrrstream}.
+	\section{Equation Section}
+	The score of a node is calculated after taking uploading bandwidth, video
+	streaming rate, latency, and stability of that node into consideration.
+	\begin{enumerate}
+		\item eqn. \eqref{eq:1} has been proposed for the calculation of score.
+		\begin{equation}\label{eq:1}
+			Score(peer)=k_1*(\frac{upload\_bandwidth}{streaming\_rate})+k_2*(\frac{1}{latency})+k_3*(\frac{active\_duration}{nums\_of\_failure})
+		\end{equation}
+	\item The general Tailor Series expansion is given in the form \eqref{eq:2}:
+	\begin{equation}\label{eq:2}
+		f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\frac{f^{(3)}(a)}{3!}(x-a)^3+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n+\cdots
+	\end{equation}
+	\item  The above expansion can be expressed as:
+	\begin{equation*}
+		f(x)=\sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n
+	\end{equation*}
+	\end{enumerate}
+	\section{Table}
+	\begin{table}[h]
+		\caption{Performance Comparison of Algorithms}
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Algorithm & Time Complexity & Space Complexity \\ \hline
+			Linear Search & $O(n)$ & $O(1)$ \\ \hline
+			Binary Search & $O(\log n)$ & $O(1)$ \\ \hline
+			Merge Sort & $O(n \log n)$ & $O(n)$ \\ \hline
+			Quick Sort & $O(n \log n)$ & $O(\log n)$ \\ \hline
+		\end{tabular}
+	\end{table}
+	\section{Algorithm}
+	The following algorithm-\eqref{eq:2} is used to search an element in a sorted array
+	in $O(\log(n))$ time.
+	\section{Image}
+	\begin{figure}[H]
+		\label{fg:1}
+		\centering
+		\includegraphics[width=0.8\textwidth]{/home/user/Desktop/B24CS013_Bodike Chaithali_exam_03/B24CS013_Task1/B24CS013.png}
+		\caption{Linux Desktop Image}
+	\end{figure}
+
+
+	The above fig.\ref{fg:1} can be seen after we log in to the ubuntu operating sys-
+	tem.
+	\section{Bibliography}
+	\bibliography{B24CS013}
+	\bibliographystyle{plain}
+\end{document}

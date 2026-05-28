@@ -1,0 +1,3 @@
+/home/bodike/Desktop/Sem3/CSP203/Practice/LabActivity_07/build/CMakeFiles/pallindrome_checks.dir
+/home/bodike/Desktop/Sem3/CSP203/Practice/LabActivity_07/build/CMakeFiles/edit_cache.dir
+/home/bodike/Desktop/Sem3/CSP203/Practice/LabActivity_07/build/CMakeFiles/rebuild_cache.dir

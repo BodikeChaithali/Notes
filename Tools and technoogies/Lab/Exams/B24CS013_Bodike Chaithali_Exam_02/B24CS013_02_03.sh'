@@ -1,0 +1,5 @@
+#!/bin/bash
+
+fileName="$1"
+output=$('$(sed '/:/"/"/Ig' "dir.txt")')
+echo "$output"

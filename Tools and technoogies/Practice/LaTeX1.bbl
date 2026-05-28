@@ -1,0 +1,21 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Knuth(1997)]{knuth1997art}
+Donald~E. Knuth.
+\newblock \emph{The Art of Computer Programming, Volume 1: Fundamental
+  Algorithms}.
+\newblock Addison-Wesley, 3rd edition, 1997.
+\newblock ISBN 978-0-201-89683-1.
+
+\bibitem[Turing(1950)]{turing1950computing}
+Alan~M. Turing.
+\newblock Computing machinery and intelligence.
+\newblock \emph{Mind}, LIX\penalty0 (236):\penalty0 433--460, 1950.
+\newblock \doi{10.1093/mind/LIX.236.433}.
+
+\end{thebibliography}

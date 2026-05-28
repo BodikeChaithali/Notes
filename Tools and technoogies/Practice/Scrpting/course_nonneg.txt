@@ -1,0 +1,3 @@
+CSL201,Mounika,100
+CSP203,Kusuma,99
+CSL202,Chaithali,100

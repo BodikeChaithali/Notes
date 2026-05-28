@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -O2 -I.} CMakeFiles/pallindrome_checks.dir/pallindrome.c.o CMakeFiles/pallindrome_checks.dir/main.c.o -o pallindrome_checks 

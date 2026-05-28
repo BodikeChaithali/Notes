@@ -1,0 +1,3 @@
+/home/bodike/Desktop/Sem3/CSP203/Practice/build/CMakeFiles/My_Project.dir
+/home/bodike/Desktop/Sem3/CSP203/Practice/build/CMakeFiles/edit_cache.dir
+/home/bodike/Desktop/Sem3/CSP203/Practice/build/CMakeFiles/rebuild_cache.dir

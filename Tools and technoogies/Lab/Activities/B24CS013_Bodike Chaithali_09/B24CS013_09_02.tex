@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{caption}
+
+\title{A Study on Computational Metrics}
+\author{Bodike Chaithali \\ B24CS013}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	
+	\begin{abstract}
+		This report demonstrates essential \LaTeX{} features including structured
+		sections, equations, tables, figures, algorithms, custom macros, and bibliography
+		management. We illustrate their usage through a new context with different formulas.
+	\end{abstract}
+	
+	\section{Introduction}
+	Mathematical relationships are fundamental in computational studies. 
+	For example, the Gaussian integral is given by
+	\begin{equation}
+		\int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi},
+	\end{equation}
+	which we will reference in later discussions.
+	
+	\section{Methods}
+	We measured the refractive index of the material using the custom macro
+	\begin{equation}
+		n = \frac{c}{v},
+	\end{equation}
+	where $c$ is the speed of light in vacuum and $v$ is the speed of light in the material.
+	
+	\subsection{Figures}
+	Figure~\ref{fig:sample} shows a demonstration image included to illustrate figure handling.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\textwidth]{"/home/bodike/Desktop/Sem3/CSP203/Practice/LaTeX_logo.png"} 
+		\caption{Sample illustration figure.}
+		\label{fig:sample}
+	\end{figure}
+	
+	\subsection{Tables}
+	Table~\ref{tab:readings} shows sample measurements of sensor readings.
+	
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Sensor & Reading 1 & Reading 2 & Reading 3 \\
+			\hline
+			A & 12.5 & 13.1 & 12.9 \\
+			\hline
+			B & 14.0 & 13.8 & 14.2 \\
+			\hline
+			C & 11.8 & 12.0 & 11.9 \\
+			\hline
+		\end{tabular}
+		\caption{Sample sensor readings.}
+		\label{tab:readings}
+	\end{table}
+	\section{Algorithm}
+	Algorithm~\ref{alg:factorial} demonstrates computing the factorial of a number.
+	
+	\begin{algorithmic}
+		\State $n \gets$ input integer
+		\State $result \gets 1$
+		\For{$i \gets 1$ \textbf{to} $n$}
+		\State $result \gets result \times i$
+		\EndFor
+	\end{algorithmic}
+	\captionof{algorithm}{Compute factorial of an integer.}
+	\label{alg:factorial}
+\end{document}
