@@ -1,0 +1,24 @@
+Lab Questions:
+
+10 Oct:
+Leetcode:
+88, 912, 75, 148, 315
+
+17 Oct:
+PDF
+
+24 Oct:
+Leetcode:
+2335, 1962, 871,  34, 23
+
+31 Oct:
+Leetcode:
+456, 3, 387, 257, 136 
+
+07 Nov:
+Leetcode:
+2415, 2685, 463, 814, 547
+
+14 Nov:
+Leetcode:
+1791, 997, 1971, 2924, 207
