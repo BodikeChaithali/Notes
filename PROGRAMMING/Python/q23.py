@@ -1,0 +1,10 @@
+i=0
+c=1
+while(i<3):
+    j=2
+    while(j<3):
+        if((i**j)<10):
+            c+=1
+        j+=2
+    i+=2
+print(c)

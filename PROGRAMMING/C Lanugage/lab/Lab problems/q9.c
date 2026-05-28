@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int start = 100;
+    int end = 999;
+    int divisor = 17;
+    int first, last;
+    int sum = 0;
+    int n; 
+    
+    first = start;
+    while (first % divisor != 0) {
+        first++;
+    }
+
+   
+    last = end;
+    while (last % divisor != 0) {
+        last--;
+    }
+
+    if (first > end || last < start) {
+    
+       printf("No numbers divisible by %d in the range %d to %d.\n", divisor, start, end);
+        return 0;
+    }
+    n = (last - first) / divisor + 1;
+    sum = n * (first + last) / 2;
+printf("The sum of all numbers divisible by %d between %d and %d is %d.\n", divisor, start, end, sum);
+
+    return 0;
+}

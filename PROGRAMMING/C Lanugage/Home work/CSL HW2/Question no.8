@@ -1,0 +1,79 @@
+#include <stdio.h>
+
+void rearrange_array(int A[], int indices[], int n, int x)
+ {
+    int low = 0;
+    int mid = 0;
+    int high = n - 1;
+    int temp;
+
+    while (mid <= high) 
+    {
+        if (A[mid] < x)
+         {
+            temp = A[low];
+            A[low] = A[mid];
+            A[mid] = temp;
+
+            temp = indices[low];
+            indices[low] = indices[mid];
+            indices[mid] = temp;
+            low++;
+            mid++;
+        } 
+        else if (A[mid] > x) 
+        {
+            temp = A[mid];
+            A[mid] = A[high];
+            A[high] = temp;
+
+            temp = indices[mid];
+            indices[mid] = indices[high];
+            indices[high] = temp;
+            high--;
+        }
+         else 
+         {
+            mid++;
+        }
+    }
+}
+void print_array(int A[], int n)
+ {
+    for (int i = 0; i < n; i++)
+     {
+        printf("%d ", A[i]);
+    }
+    printf("\n");
+}
+
+int main() 
+{
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+
+    int A[n];
+    printf("Enter %d distinct integers:", n);
+    for (int i = 0; i < n; i++) 
+    {
+        scanf("%d", &A[i]);
+    }
+
+    int indices[n];
+    for (int i = 0; i < n; i++) 
+    {
+        indices[i] = i;
+    }
+
+    int x;
+    printf("Enter the pivot element: ");
+    scanf("%d", &x);
+
+    rearrange_array(A, indices, n, x);
+
+    printf("Rearranged array:\n");
+    print_array(A, n);
+
+    return 0;
+}

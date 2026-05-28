@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+void count_occurrences(int arr[], int n, int counts[1000])
+ {
+    for (int i = 0; i < n; i++) 
+    {
+        counts[arr[i]]++;
+    }
+}
+int check_unique(int counts[1000], int n)
+ {
+    int unique_counts[1000] = {0};
+    int unique_count = 0;
+
+    for (int i = 0; i < 1000; i++)
+     {
+        if (counts[i] > 0 && unique_counts[counts[i]] == 0) 
+        {
+            unique_counts[counts[i]] = 1;
+            unique_count++;
+        }
+         else if (counts[i] > 0 && unique_counts[counts[i]] == 1) 
+         {
+            return 0;  
+        }
+    }
+
+    return 1;
+}
+
+int check(int arr[], int n) 
+{
+    int counts[1000] = {0};
+
+    count_occurrences(arr, n, counts);
+    return check_unique(counts, n);
+}
+int main()
+ {
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d integers:", n);
+    for (int i = 0; i < n; i++) 
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    if (check(arr, n))
+     {
+        printf("True\n");
+     } else 
+     {
+        printf("False\n");
+     }
+
+    return 0;
+}

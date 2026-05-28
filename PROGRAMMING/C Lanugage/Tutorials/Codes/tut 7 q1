@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+void swap(int arr[], int i, int j) {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
+
+void generatePermutations(int arr[], int start, int end) {
+    if (start == end) {
+        for (int i = 0; i <= end; i++) {
+            printf("%d ", arr[i]);
+        }
+        printf("\n");
+    } else {
+        for (int i = start; i <= end; i++) {
+            swap(arr, start, i);
+            generatePermutations(arr, start + 1, end);
+            swap(arr, start, i);
+        }
+    }
+}
+
+int main() {
+    int n;
+    int arr[10];
+
+    printf("Enter the number of distinct integers (up to 10): ");
+    scanf("%d", &n);
+
+    if (n > 10) {
+        printf("Error: Maximum size exceeded.\n");
+        return 1;
+    }
+
+    printf("Enter the distinct integers: ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("All possible permutations:\n");
+    generatePermutations(arr, 0, n - 1);
+
+    return 0;
+}
+

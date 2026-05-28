@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int main () {
+
+        int l,b,h1;
+        int h2,r1;
+        int r2;
+        //h_1 is height of cubiod
+        //h_2 is height of cylinder
+        //r_1 is radius of cylinder
+        //r_2 is radius of sphere 
+        printf("enter the length,width and height\n");
+        scanf("%d %d %d",&l,&b,&h1);
+        printf("enter the height and radius\n");
+        scanf("%d %d",&h2,&r1);
+        printf("enter the radius\n");
+        scanf("%d",&r2);
+        printf("volume of a cuboid:%d\n",(l*b*h1));
+        printf("volume of a cylinder:%f\n",(3.14*r1*r1*h2));
+        printf("volume of a sphere:%f\n",((4/3)*3.14*r2*r2*r2));
+        return 0;
+
+}
+

@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+    int n, c = 0;
+    printf("Enter a positive integer n (n <= 100): ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        int f = 0;     
+        for (int a = 0; a * a <= i && !f; a++) {
+            for (int b = 0; b * b <= i && !f; b++) {
+                if (a * a + b * b == i) {
+                    c++;
+                    f = 1;  
+                }
+            }
+        }
+    }
+    printf("Number of integers <= %d \nexpressible as sum of squares: %d\n", n, c);
+
+    return 0;
+}

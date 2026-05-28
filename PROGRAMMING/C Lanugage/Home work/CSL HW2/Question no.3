@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+void politeFunc(int n) 
+{
+    int found = 0; 
+    
+   
+    for (int start = 1; start < n; start++)
+     {
+        int sum = 0; 
+        int current = start; 
+        
+     
+        while (sum < n) 
+        {
+            sum += current; 
+            current++; 
+            
+            
+            if (sum == n && current - start > 1)
+             {
+                found = 1; 
+                for (int i = start; i < current; i++)
+                 {
+                    printf("%d ", i);
+                 }
+                printf("\n"); 
+            }
+        }
+    }
+    
+  
+    if (!found) 
+    {
+        printf("I am RUDE!\n");
+    }
+}
+
+int main()
+ {
+    int number;
+    
+    printf("Enter a positive integer: ");
+    scanf("%d", &number);
+    
+    if (number < 1)
+     {
+        printf("Please enter a positive integer greater than 0.\n");
+        return 1;
+     }
+    
+    politeFunc(number); 
+    
+    return 0;
+ }
+    
+    return 0;
+}

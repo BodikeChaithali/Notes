@@ -1,0 +1,78 @@
+#include <stdio.h>
+
+void sort(int arr[], int indices[], int n)
+ {
+    int i, j, temp;
+    for (i = 0; i < n - 1; i++) 
+    {
+        for (j = i + 1; j < n; j++)
+         {
+            if (arr[i] > arr[j])
+             {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                
+                temp = indices[i];
+                indices[i] = indices[j];
+                indices[j] = temp;
+            }
+        }
+    }
+}
+
+void iceCreamParlor(int prices[], int n, int money) 
+{
+    int indices[n];
+    for (int i = 0; i < n; i++)
+     {
+        indices[i] = i;
+    }
+    
+    sort(prices, indices, n);
+    
+    int low = 0;
+    int high = n - 1;
+    
+    while (low < high)
+     {
+        int total = prices[low] + prices[high];
+        
+        if (total == money) 
+        {
+            printf("%d %d\n", indices[low], indices[high]);
+            return;
+        } 
+        else if (total < money) 
+        {
+            low++;
+        } else
+         {
+            high--;
+        }
+    }
+    
+    printf("No solution found\n");
+}
+
+int main() 
+{
+    int n;
+    printf("Enter the number of flavors: ");
+    scanf("%d", &n);
+    
+    int money;
+    printf("Enter the total money: ");
+    scanf("%d", &money);
+    
+    int prices[n];
+    printf("Enter the prices of %d flavors:\n", n);
+    for (int i = 0; i < n; i++)
+     {
+        scanf("%d", &prices[i]);
+     }
+    
+    iceCreamParlor(prices, n, money);
+    
+    return 0;
+}

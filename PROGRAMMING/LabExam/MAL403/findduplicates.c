@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int findDuplicate(int* nums, int numsSize) {
+    int slow = nums[0];
+    int fast = nums[0];
+
+    do {
+        slow = nums[slow];
+        fast = nums[nums[fast]];
+    } while(slow != fast);
+
+    fast = nums[0];
+    while(slow != fast) {
+        slow = nums[slow];
+        fast = nums[fast];
+    }
+
+    return slow;
+}
+
+int main() {
+    int nums[] = {1,3,4,2,2};
+    int size = sizeof(nums) / sizeof(nums[0]);
+
+    int result = findDuplicate(nums, size);
+    printf("%d\n", result);
+
+    return 0;
+}

@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() 
+{
+    int A[7]; 
+    int hasInversions = 0;  
+
+    printf("Enter 7 distinct non-negative integers:");
+    for (int i = 0; i < 7; i++)
+     {
+        scanf("%d", &A[i]);
+    }
+
+    printf("Inversions in the array:\n");
+    for (int i = 0; i < 7; i++) 
+    {
+        for (int j = i + 1; j < 7; j++) 
+        {
+            if (A[i] > A[j])
+             {
+                printf("(%d,%d)\t", i, j);
+                hasInversions = 1;  
+            }
+        }
+    }
+    printf("\n");
+    if (!hasInversions) 
+    {
+        printf("No inversions here!\n");
+    }
+
+    return 0;
+}

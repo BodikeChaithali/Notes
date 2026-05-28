@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int rev(int num)
+{
+    int reversed = 0;
+    while (num > 0)
+     {
+        reversed = reversed * 10 + num % 10; 
+        num /= 10; 
+    }
+    return reversed;
+}
+
+int differev(int num)
+{
+    int reversed = rev(num); 
+    return num - reversed; 
+}
+
+int main()
+ {
+    int N;
+    printf("Enter a positive integer:");
+    scanf("%d", &N);
+
+    int difference = differev(N);
+    int reversed = rev(N); 
+
+    printf("Original number N: %d\n", N);
+    printf("Reversed number R: %d\n", reversed);
+    printf("Difference (N - R): %d\n", difference);
+
+    if (difference + reversed == N) 
+    {
+        printf("Verification: differev(N) + rev(N) = N is true.\n");
+    }
+     else 
+     {
+        printf("Verification failed.\n");
+    }
+
+    return 0;
+}

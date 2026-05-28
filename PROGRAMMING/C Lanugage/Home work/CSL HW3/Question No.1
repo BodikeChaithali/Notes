@@ -1,0 +1,194 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct Record{
+    int uid;
+    char name[100];
+    char courses[4][100];
+    int grades[4];
+    int CourseCount;
+};
+
+int password_match(int uid, const char* password);
+int user_details(int uid, struct Record* record);
+void details(struct Record record);
+void AddNewCourse(int uid, struct Record* record);
+void get_grade_for_course(struct Record record);
+void NewFile(int uid, struct Record record);
+
+int main() {
+    int uid;
+    char password[100];
+    struct Record userRecord;
+
+    printf("Enter user ID: ");
+    scanf("%d", &uid);
+    printf("Enter password: ");
+    scanf("%s", password);
+
+    if(!password_match(uid, password)){
+        printf("Invalid credentials\nAccess denied\n");
+        return 1;
+    }
+    if(!user_details(uid, &userRecord)){
+        printf("Error: User details not found\n");
+        return 1;
+    }
+    int choice;
+    do{
+        printf("\nMenu:\n");
+        printf("1. View Details\n");
+        printf("2. Add New Course\n");
+        printf("3. Get Grade for Specific Course\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch(choice){
+            case 1:
+                details(userRecord);
+                break;
+            case 2:
+                AddNewCourse(uid, &userRecord);
+                break;
+            case 3:
+                get_grade_for_course(userRecord);
+                break;
+            case 4:
+                printf("Exiting program\n");
+                break;
+            default:
+                printf("Invalid choice, Try again\n");
+        }
+    }
+    while(choice != 4);
+    return 0;
+}
+
+int password_match(int uid, const char* password){
+    FILE* file = fopen("passwords.txt", "r");
+    if(file == NULL){
+        printf("Error: Cannot open passwords file\n");
+        return 0;
+    }
+    int fileuid;
+    char filePassword[100];
+    while(fscanf(file, "%d,%s", &fileuid, filePassword) == 2){
+        if(fileuid == uid && strcmp(filePassword, password) == 0){
+            fclose(file);
+            return 1;
+        }
+    }
+    fclose(file);
+    return 0;
+}
+
+int user_details(int uid, struct Record* record){
+    FILE* file = fopen("index.txt", "r");
+    if(file == NULL){
+        printf("Error: Cannot open index file\n");
+        return 0;
+    }
+    int fileuid;
+    char line[500];
+    while(fgets(line, sizeof(line), file)){
+        sscanf(line, "%d", &fileuid);
+        if(fileuid == uid){
+            char* token = strtok(line, ",");
+            record->uid = fileuid;
+
+            token = strtok(NULL, ",");
+            strcpy(record->name, token);
+
+            record->CourseCount = 0;
+            while((token = strtok(NULL, ",")) != NULL && record->CourseCount < 4){
+                sscanf(token, "%[^:]:%d", record->courses[record->CourseCount],
+                       &record->grades[record->CourseCount]);
+                record->CourseCount++;
+            }
+            fclose(file);
+            return 1;
+        }
+    }
+    fclose(file);
+    return 0;
+}
+
+void details(struct Record record){
+    printf("\nUser Details:\n");
+    printf("Name: %s\n", record.name);
+    printf("Courses and Grades:\n");
+    for(int i = 0; i < record.CourseCount; i++){
+        printf("%s: %d\n", record.courses[i], record.grades[i]);
+    }
+}
+
+void AddNewCourse(int uid, struct Record* record){
+    if (record->CourseCount >= 4){
+        printf("Cannot add more courses, Maximum limit reached\n");
+        return;
+    }
+    char course[100];
+    int grade;
+    printf("Enter new course name: ");
+    scanf("%s", course);
+    printf("Enter grade for %s: ", course);
+    scanf("%d", &grade);
+
+    strcpy(record->courses[record->CourseCount], course);
+    record->grades[record->CourseCount] = grade;
+    record->CourseCount++;
+
+    NewFile(uid, *record);
+    printf("Course added successfully\n");
+}
+
+void get_grade_for_course(struct Record record){
+    char course[100];
+    printf("Enter course name: ");
+    scanf("%s", course);
+
+    for(int i = 0; i < record.CourseCount; i++){
+        if(strcmp(record.courses[i], course) == 0){
+            printf("Grade for %s: %d\n", course, record.grades[i]);
+            return;
+        }
+    }
+    printf("Course not found\n");
+}
+
+void NewFile(int uid, struct Record record){
+    FILE* file = fopen("index.txt", "r");
+    if(file == NULL){
+        printf("Error: Cannot open index file for updating\n");
+        return;
+    }
+    FILE* temp = fopen("temp.txt", "w");
+    if(temp == NULL){
+        printf("Error: Cannot create temporary file\n");
+        fclose(file);
+        return;
+    }
+    int fileuid;
+    char line[500];
+    while(fgets(line, sizeof(line), file)){
+        sscanf(line, "%d,", &fileuid);
+        if(fileuid == uid){
+            fprintf(temp, "%d,%s", record.uid, record.name);
+            for(int i = 0; i < record.CourseCount; i++){
+                fprintf(temp, ",%s:%d", record.courses[i], record.grades[i]);
+            }
+            fprintf(temp, "\n");
+        }
+        else{
+            fputs(line, temp);
+        }
+    }
+    fclose(file);
+    fclose(temp);
+
+    remove("index.txt");
+    rename("temp.txt", "index.txt");
+}
+
